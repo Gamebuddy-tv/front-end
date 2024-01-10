@@ -1,3 +1,4 @@
+// ROUTER 
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const BrowsePage = () => import("./BrowsePage/index.vue");
@@ -11,23 +12,43 @@ const routes = [
     props: { isHeader: true },
   },
   {
-    path: "/browse/tv",
+    path: "/events",
     component: BrowsePage,
-    name: "TV Shows",
+    name: "Events",
     props: { isHeader: true },
   },
   {
-    path: "/browse/movies",
+    path: "/trivia",
     component: BrowsePage,
-    name: "Movies",
+    name: "Trivia",
     props: { isHeader: true },
   },
+
   {
-    path: "/browse/popular",
+    path: "/community",
     component: BrowsePage,
-    name: "New & Popular",
+    name: "Community",
     props: { isHeader: true },
   },
+
+  // {
+  //   path: "/browse/tv",
+  //   component: BrowsePage,
+  //   name: "TV Shows",
+  //   props: { isHeader: true },
+  // },
+  // {
+  //   path: "/browse/movies",
+  //   component: BrowsePage,
+  //   name: "Movies",
+  //   props: { isHeader: true },
+  // },
+  // {
+  //   path: "/browse/popular",
+  //   component: BrowsePage,
+  //   name: "New & Popular",
+  //   props: { isHeader: true },
+  // },
   {
     path: "/search",
     component: SearchPage,
