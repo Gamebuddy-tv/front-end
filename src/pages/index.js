@@ -12,22 +12,22 @@ const routes = [
   },
 
   {
-    path: "/external",
-    component: BrowsePage,
-    name: "Trivia",
-    props: { isHeader: true },
-    beforeEnter() { 
-      window.open('https://google.com', '_blank');
-    }
-  },
-
-  {
     path: "/browse/tv",
     component: BrowsePage,
     name: "Events",
     props: { isHeader: true },
     beforeEnter() { 
-      window.open('https://google.com', '_blank');
+      window.open('http://localhost:5173/page-3b', '_blank');
+    }
+  },
+
+  {
+    path: "/external",
+    component: BrowsePage,
+    name: "Trivia",
+    props: { isHeader: true },
+    beforeEnter() { 
+      window.open('http://localhost:5173', '_blank');
     }
   },
 
@@ -36,7 +36,7 @@ const routes = [
     component: BrowsePage,
     name: "Community",
     beforeEnter() { 
-      window.open('https://google.com', '_blank');
+      window.open('http://localhost:5173/page-3a', '_blank');
     }
   },
  
