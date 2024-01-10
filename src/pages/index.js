@@ -10,30 +10,57 @@ const routes = [
     name: "Home",
     props: { isHeader: true },
   },
+
+  {
+    path: "/external",
+    component: BrowsePage,
+    name: "Trivia",
+    props: { isHeader: true },
+    beforeEnter() { 
+      window.open('https://google.com', '_blank');
+    }
+  },
+
   {
     path: "/browse/tv",
     component: BrowsePage,
-    name: "TV Shows",
+    name: "Events",
     props: { isHeader: true },
+    beforeEnter() { 
+      window.open('https://google.com', '_blank');
+    }
   },
+
   {
-    path: "/browse/movies",
+    path: "/browse/tv",
     component: BrowsePage,
-    name: "Movies",
-    props: { isHeader: true },
+    name: "Community",
+    beforeEnter() { 
+      window.open('https://google.com', '_blank');
+    }
   },
-  {
-    path: "/browse/popular",
-    component: BrowsePage,
-    name: "New & Popular",
-    props: { isHeader: true },
-  },
+ 
+  // {
+  //   path: "/browse/movies",
+  //   component: BrowsePage,
+  //   name: "Movies",
+  //   props: { isHeader: true },
+  // },
+
+  // {
+  //   path: "/browse/popular",
+  //   component: BrowsePage,
+  //   name: "New & Popular",
+  //   props: { isHeader: true },
+  // },
+
   {
     path: "/search",
     component: SearchPage,
     name: "Search",
     props: { isHeader: false },
   },
+
   { path: "/:pathMatch(.*)*", redirect: "/" },
 ];
 

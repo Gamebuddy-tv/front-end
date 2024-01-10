@@ -16,10 +16,13 @@
 
       <div v-else>
         <div class="relative w-full h-[30rem]">
+
           <Image
-            :src="data.details.backdrop_path"
+            v-if="playButtton == false"
+            src="/ContentThumbnail3.jpeg"
+            :staticImg="true"
             alt="info banner"
-            class="w-full h-full object-cover"
+              class="w-full h-full object-cover"
           />
 
           <circle-button
@@ -29,25 +32,47 @@
             <IconCross class="text-lg" />
           </circle-button>
 
+          <!-- IFRAME SECTION -->
+          <iframe 
+              v-if="playButtton == true"
+              src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1" 
+              title=" Hello World " 
+              class="w-full h-full"
+              frameborder="0" 
+              allow="accelerometer; autoplay; 
+                clipboard-write; encrypted-media; gyroscope; 
+                picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+          <!-- IFRAME SECTION -->
+
+
           <div class="info__overlay">
             <h1 class="text-2xl font-netflix_medium mb-6">
-              {{ data.details.title || data.details.name }}
+              {{ data.details.title || data.details.name }} -- {{ playButtton }}
             </h1>
 
             <div class="flex items-center space-x-2">
-              <Button class="bg-white text-black">
+
+              <!-- PLAY BUTTON -->
+              <Button class="bg-white text-black" 
+                @click.stop=" playbuttonClick"
+              >
                 <IconPlayFill class="text-lg" />
                 <p>Play</p>
               </Button>
+
               <circle-button>
                 <IconPlus class="text-lg" />
               </circle-button>
+
               <circle-button>
                 <IconThumbUp class="text-lg" />
               </circle-button>
+
               <circle-button>
                 <IconThumbDown class="text-lg" />
               </circle-button>
+
             </div>
           </div>
         </div>
@@ -129,6 +154,7 @@
 
 
 <script>
+import { ref, reactive } from "vue";
 import IconPlayFill from "~icons/ph/play-fill";
 import IconPlus from "~icons/ic/outline-plus";
 import IconThumbUp from "~icons/fluent/thumb-like-20-regular";
@@ -156,10 +182,24 @@ export default {
   setup() {
     const { id, type = "movies" } = state.modalData;
     const [data, isLoading, isError] = useFetch[type](id);
+
+    const playButtton = ref(false);
+    const playbuttonClick = () => {
+
+      if(playButtton == true){
+        playButtton.value = false;
+      }else{
+        playButtton.value = true;
+      }
+
+    };
+  
     return {
       data,
       isLoading,
       isError,
+      playButtton,
+      playbuttonClick
     };
   },
   components: {
@@ -178,7 +218,7 @@ export default {
   methods: {
     handleCloseClick() {
       setModalActive(false);
-    },
+    }
   },
 };
 </script>

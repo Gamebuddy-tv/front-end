@@ -1,4 +1,8 @@
 <template>
+  <p>
+    Something Here
+  </p>
+
   <div
     ref="container"
     class="
@@ -17,9 +21,12 @@
     @mouseleave="handleMouseLeave"
     @click="handleClick"
   >
+
+    <!-- IMAGE COMPONENT, WILL BE REPLACING IT WITH STATIC IMAGE -->
     <Image
-      :src="data.backdrop_path"
+      src="/ContentThumbnail3.jpeg"
       :size="185"
+      :staticImg="true"
       :class="{ 'rounded-b-none shadow': isScaled }"
       :alt="data.title"
     />
