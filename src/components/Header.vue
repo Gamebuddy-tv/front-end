@@ -4,6 +4,7 @@
     :class="[!isTop && 'bg-background']"
   >
     <div class="header__overlay absolute inset-0 w-full h-full"></div>
+    
     <div
       class="
         relative
@@ -15,13 +16,17 @@
         h-full
         p-5
         px-4
+        md:mt-2
         md:px-12
       "
     >
       <div class="flex items-center">
         <mobile-nav class="lg:hidden" />
 
-        <img :src="logo" alt="logo" class="h-full w-24 object-cover ml-4" />
+        <img :src="logo" alt="logo" 
+          class="h-full w-24 rounded-full object-cover ml-4 mt-4 
+          border-4 border-white" 
+        />
 
         <div class="items-center space-x-5 hidden lg:flex lg:ml-12">
           <router-link
@@ -54,7 +59,7 @@
 import { ref } from "vue";
 import useHeaderRoute from "../hooks/useHeaderRoute";
 import Search from "./Search.vue";
-import logo from "../assets/logo.png";
+import logo from "../assets/GameBuddyLogo.jpg";
 import MobileNav from "./MobileNav.vue";
 
 export default {
