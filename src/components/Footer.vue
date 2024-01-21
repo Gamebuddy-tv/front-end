@@ -12,7 +12,7 @@
       px-8
     "
   >
-    <div class="flex items-center space-x-1">
+    <!-- <div class="flex items-center space-x-1">
       <span>Made with</span>
       <span class="text-red-500">
         <IconHeart />
@@ -27,7 +27,8 @@
         </span>
         <span>hoangvu12</span>
       </div>
-    </a>
+    </a> -->
+
   </div>
 </template>
 

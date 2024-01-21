@@ -11,6 +11,7 @@
     >
       <SwiperSlide v-for="item in items" :key="item.id">
         <video-card :data="item" />
+
       </SwiperSlide>
 
       <template #container-end>
@@ -61,6 +62,11 @@ export default {
     items: {
       type: Array,
     },
+    mode: {
+      type: String,
+      default: "default",
+    },
+
   },
   setup() {
     const container = ref(null);

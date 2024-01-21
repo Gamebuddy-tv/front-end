@@ -18,11 +18,13 @@
           v-for="index in 4"
           :key="index"
         >
+          
           <video-card-skeleton
             class="col-span-1"
             v-for="index in items"
             :key="index"
           />
+
         </div>
       </skeleton>
 

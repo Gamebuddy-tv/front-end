@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const BrowsePage = () => import("./BrowsePage/index.vue");
+const Trivia = () => import("./BrowsePage/trivia.vue");
 const SearchPage = () => import("./SearchPage/index.vue");
 
 const routes = [
@@ -12,48 +13,24 @@ const routes = [
   },
 
   {
-    path: "/browse/tv",
+    path: "/events",
     component: BrowsePage,
     name: "Events",
     props: { isHeader: true },
-    beforeEnter() { 
-      window.open('http://localhost:5173/page-3b', '_blank');
-    }
   },
 
   {
-    path: "/external",
-    component: BrowsePage,
+    path: "/trivia",
+    component: Trivia,
     name: "Trivia",
     props: { isHeader: true },
-    beforeEnter() { 
-      window.open('http://localhost:5173', '_blank');
-    }
   },
 
   {
-    path: "/browse/tv",
+    path: "/browse/community",
     component: BrowsePage,
     name: "Community",
-    beforeEnter() { 
-      window.open('http://localhost:5173/page-3a', '_blank');
-    }
   },
- 
-  // {
-  //   path: "/browse/movies",
-  //   component: BrowsePage,
-  //   name: "Movies",
-  //   props: { isHeader: true },
-  // },
-
-  // {
-  //   path: "/browse/popular",
-  //   component: BrowsePage,
-  //   name: "New & Popular",
-  //   props: { isHeader: true },
-  // },
-
   {
     path: "/search",
     component: SearchPage,

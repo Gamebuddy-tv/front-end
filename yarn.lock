@@ -470,6 +470,11 @@
   "resolved" "https://registry.npmjs.org/csstype/-/csstype-2.6.17.tgz"
   "version" "2.6.17"
 
+"dayjs@^1.11.10":
+  "integrity" "sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ=="
+  "resolved" "https://registry.npmjs.org/dayjs/-/dayjs-1.11.10.tgz"
+  "version" "1.11.10"
+
 "defined@^1.0.0":
   "integrity" "sha1-yY2bzvdWdBiOEQlpFRGZ45sfppM="
   "resolved" "https://registry.npmjs.org/defined/-/defined-1.0.0.tgz"
