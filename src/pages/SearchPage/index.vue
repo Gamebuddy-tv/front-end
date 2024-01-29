@@ -64,13 +64,13 @@
 <script>
 import { useRoute } from "vue-router";
 import { computed } from "vue";
-import useSearch from "../../hooks/useSearch";
-import useBreakpoint from "../../hooks/useBreakpoint";
+import useSearch from "../hooks/useSearch";
+import useBreakpoint from "../hooks/useBreakpoint";
 
-import VideoCard from "../../components/VideoCard.vue";
-import { chunk } from "../../utils";
-import VideoCardSkeleton from "../../skeletons/VideoCardSkeleton.vue";
-import Skeleton from "../../components/Skeleton/index.vue";
+import VideoCard from "../components/VideoCard.vue";
+import { chunk } from "../utils";
+import VideoCardSkeleton from "../skeletons/VideoCardSkeleton.vue";
+import Skeleton from "../components/Skeleton/index.vue";
 
 export default {
   components: { VideoCard, VideoCardSkeleton, Skeleton },

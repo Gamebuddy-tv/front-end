@@ -12,14 +12,14 @@
   </template>
   
   <script>
-  import SectionContainer from "../../components/SectionContainer.vue";
-  import Banner from "../../components/Banner.vue";
-  import useDevice from "../../hooks/useDevice";
+  import SectionContainer from "../components/SectionContainer.vue";
+  import Banner from "../components/Banner.vue";
+  import useDevice from "../hooks/useDevice";
   import {
     BROWSE_ITEMS as MOVIES_BROWSE_ITEMS,
     POPULAR_BROWSE_ITEMS,
-  } from "../../services/movies";
-  import { BROWSE_ITEMS as TV_BROWSE_ITEMS } from "../../services/tv";
+  } from "../services/movies";
+  import { BROWSE_ITEMS as TV_BROWSE_ITEMS } from "../services/tv";
   
   const ITEMS = {
     movies: MOVIES_BROWSE_ITEMS,

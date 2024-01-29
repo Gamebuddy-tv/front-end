@@ -1,7 +1,10 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const BrowsePage = () => import("./BrowsePage/index.vue");
+
 const Trivia = () => import("./BrowsePage/trivia.vue");
+// const TriviaDetail = () => import("src/generatedDetailPages/Page2A.vue")
+
 const SearchPage = () => import("./SearchPage/index.vue");
 
 const routes = [
@@ -24,6 +27,12 @@ const routes = [
     component: Trivia,
     name: "Trivia",
     props: { isHeader: true },
+  },
+
+  {
+    path: "/trivia/:id",
+    component: Trivia,
+    props: { isHeader: false }, // DOES NOT APPEAR ON HEADER
   },
 
   {

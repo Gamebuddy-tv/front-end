@@ -82,6 +82,7 @@
         <p>{{ data.release_date || data.first_air_date }}</p>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -146,6 +147,10 @@ export default {
         isMouseEnter.value = false;
       }, 500);
     };
+
+    // BASED ON MODE - RENDER VIDEO PLAYER
+    // OR RENDER TRIVIA 
+    // OR CONVERSATION
 
     const handleClick = () => {
       const isTVShow = !!data.first_air_date;

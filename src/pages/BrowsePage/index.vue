@@ -10,6 +10,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import SectionContainer from "../../components/SectionContainer.vue";
 import Banner from "../../components/Banner.vue";

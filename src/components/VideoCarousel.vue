@@ -9,6 +9,11 @@
       @swiper="onReady"
       @slideChange="handleToggleButton"
     >
+
+      <!-- BASED ON MODE - RENDER VIDEO PLAYER
+      OR RENDER TRIVIA 
+      OR CONVERSATION -->
+
       <SwiperSlide v-for="item in items" :key="item.id">
         <video-card :data="item" />
 
