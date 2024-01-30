@@ -3,7 +3,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 const BrowsePage = () => import("./BrowsePage/index.vue");
 
 const Trivia = () => import("./BrowsePage/trivia.vue");
-const TriviaDetail = () => import("../generatedPages/Page2A.vue")
+const TriviaDetail = () => import("../generatedPages/Page2A1.vue")
 
 const SearchPage = () => import("./SearchPage/index.vue");
 

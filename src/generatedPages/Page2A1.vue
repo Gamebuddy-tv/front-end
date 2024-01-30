@@ -3,7 +3,10 @@
     :style="{position: 'relative', backgroundColor: '#000', width: '100%', height: '64rem', overflowY: 'auto', cursor: 'pointer', textAlign: 'left', fontSize: '1.75rem', color: '#000', fontFamily: 'Roboto'}"
     @click="onPage2A1ContainerClick"
   >
-    <b
+
+  <!-- NOT UTILISED NAVIGATION -->
+
+    <!-- <b
       :style="{position: 'absolute', top: '22.38rem', left: 'calc(50% + 323px)', textTransform: 'uppercase', display: 'none', textAlign: 'center'}"
       >Offers / Home Banner</b
     >
@@ -15,7 +18,8 @@
       >
         Hello World Category
       </div>
-    </div>
+    </div> -->
+
     <div
       :style="{position: 'absolute', top: '6.69rem', left: '285.19rem', borderRadius: '5px', backgroundColor: 'rgba(255, 255, 255, 0.06)', width: '82.25rem', height: '54.44rem'}"
     />
@@ -34,6 +38,8 @@
           <div
             :style="{position: 'absolute', height: '100%', width: '100%', top: '0%', right: '0%', bottom: '0%', left: '0%', borderRadius: '5px', backgroundColor: 'rgba(255, 255, 255, 0)'}"
           />
+
+          <!-- Question #1 -->
           <div
             :style="{position: 'absolute', height: '21.45%', width: '74.9%', top: '8.7%', right: '21.73%', bottom: '69.86%', left: '3.37%'}"
           >
@@ -51,6 +57,7 @@
             <div
               :style="{position: 'absolute', height: '70.27%', width: '88.29%', top: '29.73%', right: '7.21%', bottom: '0%', left: '4.5%'}"
             >
+              <!-- OPTIONS -->
               <FrameComponent
                 iconImageUrl="/icon@2x.png"
                 letterImageUrl="A"
@@ -95,7 +102,8 @@
                 optionTop="0.69rem"
                 optionLeft="2.56rem"
                 optionFontSize="0.69rem"
-              /><FrameComponent
+              />
+              <FrameComponent
                 iconImageUrl="/icon@2x.png"
                 letterImageUrl="A"
                 dimensionImageUrl="/group-1@2x.png"
@@ -139,7 +147,8 @@
                 optionTop="0.69rem"
                 optionLeft="2.56rem"
                 optionFontSize="0.69rem"
-              /><FrameComponent
+              />
+              <FrameComponent
                 iconImageUrl="/icon@2x.png"
                 letterImageUrl="B"
                 dimensionImageUrl="/group-1@2x.png"
@@ -183,7 +192,8 @@
                 optionTop="0.69rem"
                 optionLeft="2.56rem"
                 optionFontSize="0.69rem"
-              /><FrameComponent
+              />
+              <FrameComponent
                 iconImageUrl="/icon@2x.png"
                 letterImageUrl="D"
                 dimensionImageUrl="/group-1@2x.png"
@@ -228,8 +238,11 @@
                 optionLeft="2.56rem"
                 optionFontSize="0.69rem"
               />
+
             </div>
           </div>
+
+          <!-- Question #2 -->
           <div
             :style="{position: 'absolute', height: '26.23%', width: '93.25%', top: '39.71%', right: '3.37%', bottom: '34.06%', left: '3.37%'}"
           >
@@ -428,110 +441,23 @@
               />
             </div>
           </div>
+
+          <!-- Question #3 -->
           <div
             :style="{position: 'absolute', height: '28.84%', width: '91.9%', top: '75.94%', right: '4.72%', bottom: '-4.78%', left: '3.37%'}"
           >
             <b
-              :style="{position: 'absolute', width: '100%', top: '0%', left: '0%', display: 'inline-block'}"
-            >
+              :style="{position: 'absolute', width: '100%', top: '0%', left: '0%', display: 'inline-block'}">
               <ul
                 :style="{margin: '0', fontFamily: 'inherit', fontSize: 'inherit', paddingLeft: '1.35rem'}"
               >
                 <li>
-                  On the basis of which rule is the decision of winning or
-                  losing in a cricket match interrupted due to rain or low
-                  light?
+                  Questions 3
                 </li>
-              </ul> </b
-            ><FrameComponent
-              iconImageUrl="/icon@2x.png"
-              letterImageUrl="C"
-              dimensionImageUrl="/group-1@2x.png"
-              :showFrameDiv="false"
-              :icon1="false"
-              :groupIcon="false"
-              frameDivWidth="19.97%"
-              frameDivPosition="absolute"
-              frameDivHeight="29.65%"
-              frameDivTop="70.35%"
-              frameDivRight="76.36%"
-              frameDivBottom="0%"
-              frameDivLeft="3.67%"
-              frameDivPadding="0.63rem"
-              frameDivBackgroundColor="#000"
-              frameDivWidth1="13.25rem"
-              frameDivHeight1="2.25rem"
-              iconTop="0.63rem"
-              iconLeft="0.63rem"
-              iconWidth="1.5rem"
-              iconHeight="1.5rem"
-              groupDivTop="0.38rem"
-              groupDivLeft="0.63rem"
-              groupDivWidth="1.38rem"
-              groupDivHeight="1.38rem"
-              groupDivTop1="0rem"
-              groupDivLeft1="0rem"
-              groupDivWidth1="1.38rem"
-              groupDivHeight1="1.38rem"
-              ellipseDivTop="0rem"
-              ellipseDivLeft="0rem"
-              ellipseDivWidth="1.38rem"
-              ellipseDivHeight="1.38rem"
-              aTop="0.31rem"
-              aLeft="0.44rem"
-              aFontSize="0.69rem"
-              groupIconTop="0rem"
-              groupIconLeft="0rem"
-              groupIconWidth="1.38rem"
-              groupIconHeight="1.38rem"
-              optionTop="0.69rem"
-              optionLeft="2.56rem"
-              optionFontSize="0.69rem"
-            /><FrameComponent
-              iconImageUrl="/icon@2x.png"
-              letterImageUrl="D"
-              dimensionImageUrl="/group-1@2x.png"
-              :showFrameDiv="false"
-              :icon1="false"
-              :groupIcon="false"
-              frameDivWidth="19.97%"
-              frameDivPosition="absolute"
-              frameDivHeight="29.65%"
-              frameDivTop="70.35%"
-              frameDivRight="24.38%"
-              frameDivBottom="0%"
-              frameDivLeft="55.65%"
-              frameDivPadding="0.63rem"
-              frameDivBackgroundColor="#000"
-              frameDivWidth1="13.25rem"
-              frameDivHeight1="2.25rem"
-              iconTop="0.63rem"
-              iconLeft="0.63rem"
-              iconWidth="1.5rem"
-              iconHeight="1.5rem"
-              groupDivTop="0.38rem"
-              groupDivLeft="0.63rem"
-              groupDivWidth="1.38rem"
-              groupDivHeight="1.38rem"
-              groupDivTop1="0rem"
-              groupDivLeft1="0rem"
-              groupDivWidth1="1.38rem"
-              groupDivHeight1="1.38rem"
-              ellipseDivTop="0rem"
-              ellipseDivLeft="0rem"
-              ellipseDivWidth="1.38rem"
-              ellipseDivHeight="1.38rem"
-              aTop="0.31rem"
-              aLeft="0.44rem"
-              aFontSize="0.69rem"
-              groupIconTop="0rem"
-              groupIconLeft="0rem"
-              groupIconWidth="1.38rem"
-              groupIconHeight="1.38rem"
-              optionTop="0.69rem"
-              optionLeft="2.56rem"
-              optionFontSize="0.69rem"
-            />
+              </ul> 
+              </b>
+            
+            <!-- OPTIONS -->
             <div
               :style="{position: 'absolute', top: '4.63rem', left: '1.56rem', width: '30.63rem', height: '6.5rem'}"
             >
@@ -579,7 +505,9 @@
                 optionTop="0.69rem"
                 optionLeft="2.56rem"
                 optionFontSize="0.69rem"
-              /><FrameComponent
+              />
+              
+              <FrameComponent
                 iconImageUrl="/icon@2x.png"
                 letterImageUrl="A"
                 dimensionImageUrl="/group-1@2x.png"
@@ -623,7 +551,9 @@
                 optionTop="0.69rem"
                 optionLeft="2.56rem"
                 optionFontSize="0.69rem"
-              /><FrameComponent
+              />
+              
+              <FrameComponent
                 iconImageUrl="/icon@2x.png"
                 letterImageUrl="B"
                 dimensionImageUrl="/group-1@2x.png"
@@ -667,7 +597,9 @@
                 optionTop="0.69rem"
                 optionLeft="2.56rem"
                 optionFontSize="0.69rem"
-              /><FrameComponent
+              />
+              
+              <FrameComponent
                 iconImageUrl="/icon@2x.png"
                 letterImageUrl="D"
                 dimensionImageUrl="/group-1@2x.png"
@@ -713,13 +645,16 @@
                 optionFontSize="0.69rem"
               />
             </div>
+
           </div>
+
+          <!-- Question #4 -->
           <Group
-            cricketTriviaQuestion="Which cricketer has scored the most ducks at the World Cup?"
+            cricketTriviaQuestion=" GROUP  Component"
             propTop="114.78%"
             propBottom="-36.23%"
           />
-          <div
+          <!-- <div
             :style="{position: 'absolute', height: '21.45%', width: '80.97%', top: '147.83%', right: '15.65%', bottom: '-69.28%', left: '3.37%'}"
           >
             <b
@@ -915,8 +850,14 @@
                 optionFontSize="0.69rem"
               />
             </div>
-          </div>
+          </div> -->
+
         </div>
+
+        <!-- END Of QUESTIONS & OPTIONS LIST -->
+
+
+        <!-- CTA TO SAVE OPTIONS -->
         <div
           :style="{position: 'absolute', height: '13.55%', width: '54.73%', top: '86.45%', right: '0%', bottom: '0%', left: '45.27%'}"
         >
@@ -958,7 +899,10 @@
               defaultoutlinearrowRightIFlexShrink1="0"
               minWidthLineWidth="5.5rem"
               minWidthLineHeight="0rem"
-            /><TypePrimarySizeLarge
+            />
+            
+            
+            <TypePrimarySizeLarge
               iconImageUrl="/hugeiconmultimedia-and-audiosolidfavourite@2x.png"
               text="Cancel"
               iconTextId="/hugeiconmultimedia-and-audiosolidfavourite@2x.png"
@@ -993,6 +937,8 @@
             />
           </div>
         </div>
+
+        <!-- LEFT HAND SIDE IMAGE & DESCRIPTION OF THE TRIVIA -->
         <div
           :style="{position: 'absolute', top: '1.94rem', left: '2.13rem', width: '35rem', height: '24.56rem', fontSize: '1.13rem'}"
         >
@@ -1021,8 +967,11 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
+
+    <!-- CTA BACK TO LISTING -->
     <div
       :style="{position: 'absolute', top: '2rem', left: '4rem', borderRadius: '4px', backgroundColor: '#fff', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-start', padding: '0.5rem 1rem 0.5rem 0.75rem', cursor: 'pointer', fontSize: '0.88rem', color: '#2b2b2b'}"
       @click="onPlayButtonContainerClick"
@@ -1034,13 +983,16 @@
       />
       <b :style="{position: 'relative'}">Back to List</b>
     </div>
+    <!-- CTA BACK TO LISTING -->
+
+
   </div>
 </template>
 <script lang="ts">
   import { defineComponent } from "vue";
-  import FrameComponent from "../components/FrameComponent.vue";
-  import Group from "../components/Group.vue";
-  import TypePrimarySizeLarge from "../components/TypePrimarySizeLarge.vue";
+  import FrameComponent from "../GeneratedComponent/FrameComponent.vue";
+  import Group from "../GeneratedComponent/Group.vue";
+  import TypePrimarySizeLarge from "../GeneratedComponent/TypePrimarySizeLarge.vue";
 
   export default defineComponent({
     name: "Page2A1",
