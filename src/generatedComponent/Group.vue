@@ -14,32 +14,42 @@
     <div
       :style="{position: 'absolute', height: '70.27%', width: '81.67%', top: '29.73%', right: '14.17%', bottom: '0%', left: '4.17%'}"
     >
+
+
       <FrameComponent
+        v-for=" (item, index) in [1,2,3,4]" :key="index"
+        :letterImageUrl="item.toString()"
+        :frameDivBackgroundColor=" optionIndex == index ? '#db202c' : '#000' "
+        :optionShared="item.toString()"
+
+        :frameDivTop="`${ (index * 33) }%`"
+        frameDivRight="29.59%"
+        :frameDivBottom="(100 - (index * 33) ).toString() + `%`"
+        frameDivLeft="0%"
+
         iconImageUrl="/icon@2x.png"
-        letterImageUrl="A"
         dimensionImageUrl="/group-1@2x.png"
         :showFrameDiv="true"
         :icon1="false"
         :groupIcon="true"
         frameDivWidth="70.41%"
         frameDivPosition="absolute"
-        frameDivHeight="53.85%"
-        frameDivTop="0%"
-        frameDivRight="29.59%"
-        frameDivBottom="46.15%"
-        frameDivLeft="0%"
+
+        frameDivHeight="60.85%"
         frameDivPadding="0.63rem"
-        frameDivBackgroundColor="#db202c"
         frameDivWidth1="13.25rem"
         frameDivHeight1="2.25rem"
+
         iconTop="0.63rem"
         iconLeft="0.63rem"
         iconWidth="1.5rem"
         iconHeight="1.5rem"
+
         groupDivTop="0.38rem"
         groupDivLeft="0.63rem"
         groupDivWidth="1.38rem"
         groupDivHeight="1.38rem"
+
         groupDivTop1="0rem"
         groupDivLeft1="0rem"
         groupDivWidth1="1.38rem"
@@ -55,6 +65,7 @@
         groupIconLeft="0rem"
         groupIconWidth="1.38rem"
         groupIconHeight="1.38rem"
+
         optionTop="0.69rem"
         optionLeft="2.56rem"
         optionFontSize="0.69rem"
@@ -63,7 +74,7 @@
       <!-- Correct Answer -->
         <!-- Highlight Option - Prop Key used is groupIcon  -->
         <!-- frameDivBackgroundColor="#db202c" -->
-      <FrameComponent
+      <!-- <FrameComponent
         iconImageUrl="/icon@2x.png"
         letterImageUrl="12"
         dimensionImageUrl="/group-1@2x.png"
@@ -201,7 +212,7 @@
         optionTop="0.69rem"
         optionLeft="2.56rem"
         optionFontSize="0.69rem"
-      />
+      /> -->
 
     </div>
   </div>
@@ -221,6 +232,10 @@
   cricketTriviaQuestion: { type: String  }
   ,propTop: { type: String  }
   ,propBottom: { type: String  }
+
+  ,options: { type: Array}
+  ,optionIndex: { type: Number  }
+
   },
   computed: {  groupDiv5Style(): CSS.Properties {
                     return {

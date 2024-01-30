@@ -9,7 +9,19 @@
           </div>
           <img v-if="!groupIcon"  alt=""  :src=dimensionImageUrl :style="{position: 'absolute', top: '0px', left: '0px', width: '22px', height: '22px', objectFit: 'cover', display: 'none', ...groupIcon1Style}" />
         </div>
-        <div :style="{position: 'absolute', top: '11px', left: '41px', color: '#fff', ...optionStyle}">Option</div>
+
+
+        <div 
+          :style="{position: 'absolute', top: '11px', left: '41px', color: '#fff', ...optionStyle}">
+          {{ optionShared }}
+        </div>
+
+      <!-- <div 
+        V-else
+        :style="{position: 'absolute', top: '11px', left: '41px', color: '#fff', ...optionStyle}">
+        OPTION HAS NOT RENDERED
+      </div> -->
+
       </div>
     </div>
 </template>
@@ -60,6 +72,7 @@ iconImageUrl: { type: String  }
 ,groupIconLeft: { type: String  }
 ,groupIconWidth: { type: String  }
 ,groupIconHeight: { type: String  }
+,optionShared: { type: String }
 ,optionTop: { type: String  }
 ,optionLeft: { type: String  }
 ,optionFontSize: { type: String  }
