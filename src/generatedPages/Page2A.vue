@@ -521,9 +521,9 @@
 </template>
 <script lang="ts">
   import { defineComponent } from "vue";
-  import Property1Variant31 from "../components/Property1Variant31.vue";
-  import ImageVariant2 from "../components/ImageVariant2.vue";
-  import Navigation from "../components/Navigation.vue";
+  import Property1Variant31 from "../generatedComponent/Property1Variant31.vue";
+  import ImageVariant2 from "../generatedComponent/ImageVariant2.vue";
+  import Navigation from "../generatedComponent/Navigation.vue";
 
   export default defineComponent({
     name: "Page2A",

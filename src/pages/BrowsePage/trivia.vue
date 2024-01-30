@@ -24,7 +24,7 @@
   import Banner from "../../components/Banner.vue";
   import useDevice from "../../hooks/useDevice";
 
-  import { BROWSE_ITEMS as TV_BROWSE_ITEMS } from "../services/tv";
+  import { BROWSE_ITEMS as TV_BROWSE_ITEMS } from "../../services/tv";
   
   export default {
     name:'Trivia',
