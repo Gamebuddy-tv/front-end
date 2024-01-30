@@ -648,13 +648,22 @@
 
           </div>
 
+
+          :style="{position: 'absolute', height: '28.84%', width: '91.9%', top: '75.94%', right: '4.72%', bottom: '-4.78%', left: '3.37%'}"
+
+
           <!-- Question #4 -->
           <Group
-            cricketTriviaQuestion=" GROUP  Component"
+            v-for="(item, index) in [1,2,3,4]"
+            :key="index"
+
+            :cricketTriviaQuestion=" `GROUP  Component ${item}`"
             propTop="114.78%"
             propBottom="-36.23%"
           />
-          <!-- <div
+
+          <!-- QUESTION #5 -->
+          <div
             :style="{position: 'absolute', height: '21.45%', width: '80.97%', top: '147.83%', right: '15.65%', bottom: '-69.28%', left: '3.37%'}"
           >
             <b
@@ -850,7 +859,7 @@
                 optionFontSize="0.69rem"
               />
             </div>
-          </div> -->
+          </div>
 
         </div>
 
