@@ -7,6 +7,7 @@
       alt=""
       src="/group-758530575@2x.png"
     />
+
     <div
       :style="{position: 'absolute', top: '3.44rem', left: '5.19rem', width: '205.69rem', height: '76.88rem'}"
     >

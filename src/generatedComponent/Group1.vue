@@ -2,14 +2,19 @@
   <div
     :style="{position: 'absolute', top: '1rem', left: '2.88rem', width: '38.75rem', height: '55.63rem', textAlign: 'left', fontSize: '0.88rem', color: '#fff', fontFamily: 'Roboto'}"
   >
-    <Component35 
-      rectangleDivTop="0rem" 
-      title="My opinion"
-      firstName="STall Z"
-      conversation="hello is this the right place  hello is this the right placehello is this the right place" 
+
+    <Component35
+      v-for=" (item, index) in [1,2,3,4,5,6,7,8,9,10]" :key="index"
+      :rectangleDivTop="(index * 11.88) + 'rem' " 
+      :title="item.toString()"
+      :firstName="item.toString()"
+      :conversation="item.toString()"
+      :createdOn = "item.toString()"
     />
     
-    <Component35
+    <!-- <Component35
+      title="My opinion"
+      firstName="STallo"
       rectangleDivTop="11.88rem"/>
 
     <Component35 rectangleDivTop="23.75rem" />
@@ -19,7 +24,7 @@
 
     <Component35 rectangleDivTop="46.25rem" />
 
-    <Component35 rectangleDivTop="57.25rem" />
+    <Component35 rectangleDivTop="57.25rem" /> -->
 
   </div>
 </template>

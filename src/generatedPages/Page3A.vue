@@ -80,7 +80,7 @@
 </template>
 <script lang="ts">
   import { defineComponent } from "vue";
-  import Group1 from "../components/Group1.vue";
+  import Group1 from "../generatedComponent/Group1.vue";
 
   export default defineComponent({
     name: "Page3A",

@@ -5,6 +5,8 @@ const BrowsePage = () => import("./BrowsePage/index.vue");
 const Trivia = () => import("./BrowsePage/trivia.vue");
 const TriviaDetail = () => import("../generatedPages/Page2A1.vue")
 
+const SingleConversation = () => import("../generatedPages/Page3A.vue");
+
 const SearchPage = () => import("./SearchPage/index.vue");
 
 const routes = [
@@ -36,10 +38,17 @@ const routes = [
   },
 
   {
-    path: "/browse/community",
+    path: "/community",
     component: BrowsePage,
     name: "Community",
+    props: { isHeader: true }, // DOES NOT APPEAR ON HEADER
   },
+  {
+    path: "/community/:id",
+    component: SingleConversation,
+    name: "Community",
+  },
+
   {
     path: "/search",
     component: SearchPage,

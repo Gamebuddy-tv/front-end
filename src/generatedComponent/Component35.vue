@@ -51,7 +51,7 @@
       >
         <!-- TITLE  -->
         <b
-          v-if="title"
+          v-if="title != null"
           :style="{position: 'absolute', height: '26.37%', width: '70.67%', top: '0%', left: '0%', letterSpacing: '0.26px', lineHeight: '1.53rem', textTransform: 'uppercase', display: 'inline-block'}"
           >{{ title }}</b
         >
@@ -96,9 +96,9 @@
   name: "Component35",
   props: {
     rectangleDivTop: { type: String  },
-    profilePic: { type: String },
-    title: { type: String, default: null},
-    conversation: { type: String, default: null},
+    profilePic: { type: String, default:null },
+    title: { type: String },
+    conversation: { type: String},
     time: { type: String, default: null },
     firstName : { type: String, default: null },
     userId: { type: Number, default: null },
