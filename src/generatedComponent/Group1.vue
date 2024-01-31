@@ -11,30 +11,22 @@
       :conversation="item.toString()"
       :createdOn = "item.toString()"
     />
-    
-    <!-- <Component35
-      title="My opinion"
-      firstName="STallo"
-      rectangleDivTop="11.88rem"/>
 
-    <Component35 rectangleDivTop="23.75rem" />
-
-    <Component35
-      rectangleDivTop="35.63rem"/>
-
-    <Component35 rectangleDivTop="46.25rem" />
-
-    <Component35 rectangleDivTop="57.25rem" /> -->
+    <!-- IF OWNER - ADD TEXT -->
+    <ConversationInputBox
+      :rectangleDivTop="(11.88 * 10 ) + 'rem' "
+    />
 
   </div>
 </template>
 <script lang="ts">
   import { defineComponent } from "vue";
   import Component35 from "./Component35.vue";
+  import ConversationInputBox from "./ConversationInputBox.vue"
 
   export default defineComponent({
     name: "Group1",
-    components: { Component35 },
+    components: { Component35, ConversationInputBox},
     setup() {
       const comments = () => {
         console.log('This is a dummy method');
