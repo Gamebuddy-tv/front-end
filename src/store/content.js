@@ -3,6 +3,11 @@ import { defineStore } from 'pinia';
 const contentStore = defineStore('content', {
   state: () => ({
     contents: [],
+    cateogy: [],
+    subCategory: [],
+    popular: [],
+    new: [],
+    watchAgain: [],
   }),
 
   actions: {
@@ -15,6 +20,16 @@ const contentStore = defineStore('content', {
         console.error('Error fetching contents:', error);
       }
     },
+    
+    async fetchExplorerContent() {
+        try {
+          const response = await fetch('/api/content/explorer');
+          const data = await response.json();
+          this.contents = data;
+        } catch (error) {
+          console.error('Error fetching contents:', error);
+        }
+      },
 
     async createContent(newContent) {
       try {
@@ -61,6 +76,7 @@ const contentStore = defineStore('content', {
         console.error('Error deleting content:', error);
       }
     },
+
   },
 });
 

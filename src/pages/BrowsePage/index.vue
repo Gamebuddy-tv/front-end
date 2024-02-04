@@ -12,54 +12,71 @@
 </template>
 
 <script>
-import SectionContainer from "../../components/SectionContainer.vue";
-import Banner from "../../components/Banner.vue";
-import useDevice from "../../hooks/useDevice";
-import {
-  BROWSE_ITEMS as MOVIES_BROWSE_ITEMS,
-  POPULAR_BROWSE_ITEMS,
-} from "../../services/movies";
-import { BROWSE_ITEMS as TV_BROWSE_ITEMS } from "../../services/tv";
+  import SectionContainer from "../../components/SectionContainer.vue";
+  import Banner from "../../components/Banner.vue";
+  import useDevice from "../../hooks/useDevice";
+  import {
+    BROWSE_ITEMS as MOVIES_BROWSE_ITEMS,
+    POPULAR_BROWSE_ITEMS,
+  } from "../../services/movies";
+  import { BROWSE_ITEMS as TV_BROWSE_ITEMS } from "../../services/tv";
 
-const ITEMS = {
-  movies: MOVIES_BROWSE_ITEMS,
-  tv: TV_BROWSE_ITEMS,
-  home: [...TV_BROWSE_ITEMS, ...MOVIES_BROWSE_ITEMS],
-  popular: POPULAR_BROWSE_ITEMS,
-};
+  // PINIA STORE
+  import { ref, onMounted } from 'vue';
+  import { useStore } from 'pinia';
+  import contentStore from '../../store/content.js';
 
-export default {
-  components: {
-    SectionContainer,
-    Banner,
-  },
-  setup() {
-    const { isDesktop } = useDevice();
+  const ITEMS = {
+    movies: MOVIES_BROWSE_ITEMS,
+    tv: TV_BROWSE_ITEMS,
+    home: [...TV_BROWSE_ITEMS, ...MOVIES_BROWSE_ITEMS],
+    popular: POPULAR_BROWSE_ITEMS,
+  };
 
-    return { isDesktop };
-  },
-  computed: {
-    type() {
-      if (this.$route.path.includes("tv")) {
-        return "tv";
-      }
+  export default {
+    components: {
+      SectionContainer,
+      Banner,
+    },
+    setup() {
+      const { isDesktop } = useDevice();
 
-      if (this.$route.path.includes("movies")) {
-        return "movies";
-      }
+      // CONTENT STORE
+      const store = useStore(contentStore);
 
-      if (this.$route.path.includes("popular")) {
-        return "popular";
-      }
+      // GET DETAILS OF THE FOLLOWING ( Also Known as items )
+      const rows = ["CATEGORY", "SUB-CATEGORY", "POPULAR", "NEW", "WATCH-AGAIN"];
 
-      return "home";
+      // Example of using a Pinia store action
+      onMounted(async () => {
+        await store.fetchExplorerContent();
+      });
+
+      return { isDesktop };
+    },
+    computed: {
+      type() {
+        if (this.$route.path.includes("tv")) {
+          return "tv";
+        }
+
+        if (this.$route.path.includes("movies")) {
+          return "movies";
+        }
+
+        if (this.$route.path.includes("popular")) {
+          return "popular";
+        }
+
+        return "home";
+      },
+
+      items() {
+        return ITEMS[this.type];
+      },
     },
 
-    items() {
-      return ITEMS[this.type];
-    },
-  },
-};
+  };
 </script>
 <style>
 </style>
